@@ -37,7 +37,7 @@ class GarbageDayPage extends StatelessWidget {
               left: 145.0,
             ),
             child: Text(
-              'Garbage day',
+              'Pick-up day',
               style: TextStyle(
                 fontFamily: 'Poppins',
                 fontWeight: FontWeight.w600,
@@ -86,7 +86,7 @@ class GarbageDayPage extends StatelessWidget {
           ),
           Container(
             width: 330,
-            height: 100,
+            height: 120,
             margin: const EdgeInsets.only(
               top: 600.0,
               bottom: 0.0,
@@ -131,12 +131,29 @@ class GarbageDayPage extends StatelessWidget {
                   right: 110.0,
                 ),
                 child: Text(
-                  'Tomorrow: Garbage day',
+                  'Tomorrow: Pick-up day',
                   style: TextStyle(
                     fontFamily: 'Poppins',
                     fontSize: 15.0,
                     fontWeight: FontWeight.w700,
                     color: Color.fromARGB(150, 29, 83, 95),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                  top: 10.0,
+                  bottom: 0.0,
+                  left: 0.0,
+                  right: 165.0,
+                ),
+                child: Text(
+                  'Only Recyclable items',
+                  style: TextStyle(
+                    fontFamily: 'Poppins',
+                    fontSize: 11.0,
+                    fontWeight: FontWeight.w700,
+                    color: Color.fromARGB(95, 255, 32, 2),
                   ),
                 ),
               ),

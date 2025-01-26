@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/community.dart';
 import 'package:flutter_application_1/garbageday_page.dart';
 import 'package:flutter_application_1/nearest_page.dart';
 import 'package:flutter_application_1/news_page.dart';
 import 'package:flutter_application_1/profile_page.dart';
 import 'package:flutter_application_1/scan_page.dart';
-import 'package:flutter_application_1/tips_page.dart';
+import 'package:flutter_application_1/tips.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -32,17 +33,22 @@ class HomePage extends StatelessWidget {
               onTap: () {
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (BuildContext context) {
-                  return const ProfilePage();
+                  return const community();
                 }));
               },
               child: Container(
-                  width: 40,
-                  height: 40,
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    //color: Colors.white, //remove this when you add image.
-                  ),
-                  child: Image.asset('images/community1.png')),
+                width: 40,
+                height: 40,
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  //color: Colors.white, //remove this when you add image.
+                ),
+                child: const Icon(
+                  Icons.connect_without_contact_rounded,
+                  color: Color.fromARGB(125, 30, 30, 30),
+                  size: 33,
+                ),
+              ),
             ),
           ),
           Padding(
@@ -55,13 +61,18 @@ class HomePage extends StatelessWidget {
                 }));
               },
               child: Container(
-                  width: 40,
-                  height: 40,
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    //color: Colors.white, //remove this when you add image.
-                  ),
-                  child: Image.asset('images/account.png')),
+                width: 40,
+                height: 40,
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  //color: Colors.white, //remove this when you add image.
+                ),
+                child: const Icon(
+                  Icons.person,
+                  color: Color.fromARGB(125, 30, 30, 30),
+                  size: 33,
+                ),
+              ),
             ),
           ),
         ],
@@ -74,7 +85,7 @@ class HomePage extends StatelessWidget {
             onTap: () {
               Navigator.of(context)
                   .push(MaterialPageRoute(builder: (BuildContext context) {
-                return const TipsPage();
+                return const tips();
               }));
             },
             child: Container(
@@ -195,7 +206,7 @@ class HomePage extends StatelessWidget {
                   Image.asset('images/trashbagresize.png'),
                   const ListTile(
                     title: Text(
-                      'Garbage day',
+                      'Pick-up day',
                       style: TextStyle(
                         color: Color.fromARGB(255, 29, 83, 95),
                         fontFamily: 'Poppins',

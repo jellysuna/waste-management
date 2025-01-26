@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/getstarted.dart';
 import 'package:flutter_application_1/home_page.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -52,7 +53,7 @@ class ProfilePage extends StatelessWidget {
                 color: Colors.white,
               ),
               width: 330.0,
-              height: 580.0,
+              height: 660.0,
             ),
           ),
           const SizedBox(
@@ -207,11 +208,41 @@ class ProfilePage extends StatelessWidget {
                   //more than 50% of width makes circle
                   ),
               child: Image.asset(
-                'images/WilliamM.png',
+                'images/williamreal.png',
                 fit: BoxFit.cover,
               ),
             ),
-          )
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const getstarted()),
+              );
+            },
+            child: Padding(
+              padding: const EdgeInsets.only(top: 720, left: 100),
+              child: Container(
+                height: 45,
+                width: 200,
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 232, 226, 228),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: const Center(
+                  child: Text(
+                    "Log out",
+                    style: TextStyle(
+                      fontFamily: 'Poppins',
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.w600,
+                      color: Color.fromARGB(255, 29, 83, 95),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
