@@ -79,26 +79,226 @@ class HomePage extends StatelessWidget {
         automaticallyImplyLeading: false,
         backgroundColor: const Color.fromARGB(249, 248, 248, 248),
       ),
-      body: Wrap(
-        children: [
-          GestureDetector(
-            onTap: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (BuildContext context) {
-                return const tips();
-              }));
-            },
-            child: Container(
-              width: 156,
-              height: 156,
-              margin: const EdgeInsets.only(
-                bottom: 15.0,
-                top: 40.0,
-                left: 28.0,
-                right: 10.0,
+      body: SingleChildScrollView(
+        child: Wrap(
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (BuildContext context) {
+                  return const tips();
+                }));
+              },
+              child: Container(
+                width: 156,
+                height: 156,
+                margin: const EdgeInsets.only(
+                  bottom: 15.0,
+                  top: 40.0,
+                  left: 28.0,
+                  right: 10.0,
+                ),
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.black12,
+                        spreadRadius: 2,
+                        blurRadius: 2,
+                        offset: Offset(2, 2),
+                      )
+                    ]),
+                child: Column(
+                  children: [
+                    const Padding(padding: EdgeInsets.all(10.0)),
+                    Image.asset('images/bulbresize1.png'),
+                    const ListTile(
+                      title: Text(
+                        'Tips',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 29, 83, 95),
+                          fontFamily: 'Poppins',
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.w600,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    )
+                  ],
+                ),
               ),
-              decoration: BoxDecoration(
-                  color: Colors.white,
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (BuildContext context) {
+                  return const NearestPage();
+                }));
+              },
+              child: Container(
+                width: 156,
+                height: 156,
+                margin: const EdgeInsets.symmetric(
+                  horizontal: 15.0,
+                  vertical: 40.0,
+                ),
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.black12,
+                        spreadRadius: 2,
+                        blurRadius: 2,
+                        offset: Offset(2, 2),
+                      )
+                    ]),
+                child: Column(
+                  children: [
+                    const Padding(padding: EdgeInsets.all(10.0)),
+                    Image.asset('images/trashbinresize.png'),
+                    const ListTile(
+                      title: Text(
+                        'Nearest',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 29, 83, 95),
+                          fontFamily: 'Poppins',
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.w600,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (BuildContext context) {
+                  return const GarbageDayPage();
+                }));
+              },
+              child: Container(
+                width: 156,
+                height: 156,
+                margin: const EdgeInsets.only(
+                  bottom: 15.0,
+                  top: 10.0,
+                  left: 28.0,
+                  right: 10.0,
+                ),
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.black12,
+                        spreadRadius: 2,
+                        blurRadius: 2,
+                        offset: Offset(2, 2),
+                      )
+                    ]),
+                child: Column(
+                  children: [
+                    const Padding(padding: EdgeInsets.all(10.0)),
+                    Image.asset('images/trashbagresize.png'),
+                    const ListTile(
+                      title: Text(
+                        'Pick-up day',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 29, 83, 95),
+                          fontFamily: 'Poppins',
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.w600,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (BuildContext context) {
+                  return const ScanPage();
+                }));
+              },
+              child: Container(
+                width: 156,
+                height: 156,
+                margin: const EdgeInsets.symmetric(
+                  horizontal: 15.0,
+                  vertical: 10.0,
+                ),
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.black12,
+                        spreadRadius: 2,
+                        blurRadius: 2,
+                        offset: Offset(2, 2),
+                      )
+                    ]),
+                child: Column(
+                  children: [
+                    const Padding(padding: const EdgeInsets.only(
+                        left: 10, right: 10, bottom: 8)),
+                    Image.asset('images/boxresize1.png'),
+                    const ListTile(
+                      title: Text(
+                        'Scan material',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 29, 83, 95),
+                          fontFamily: 'Poppins',
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.w600,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(
+                  left: 25,
+                  bottom: 0,
+                  right: 20,
+                  top: 35), //apply padding to some sides only
+              child: Text(
+                "Popular articles",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 29, 83, 95),
+                  fontFamily: 'Poppins',
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (BuildContext context) {
+                  return const NewsPage();
+                }));
+              },
+              child: Container(
+                width: 350,
+                height: 150,
+                margin: const EdgeInsets.symmetric(
+                  horizontal: 20.0,
+                  vertical: 10.0,
+                ),
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 95, 171, 125),
                   borderRadius: BorderRadius.circular(15),
                   boxShadow: const [
                     BoxShadow(
@@ -107,222 +307,25 @@ class HomePage extends StatelessWidget {
                       blurRadius: 2,
                       offset: Offset(2, 2),
                     )
-                  ]),
-              child: Column(
-                children: [
-                  const Padding(padding: EdgeInsets.all(10.0)),
-                  Image.asset('images/bulbresize1.png'),
-                  const ListTile(
-                    title: Text(
-                      'Tips',
+                  ],
+                ),
+                child: Row(
+                  children: [
+                    const Padding(padding: EdgeInsets.all(5.0)),
+                    Image.asset('images/newsresize2.png'),
+                    const Text(
+                      'Read latest news about\nenvironmentalism\nand sustainability all over\nthe world in one place',
                       style: TextStyle(
-                        color: Color.fromARGB(255, 29, 83, 95),
                         fontFamily: 'Poppins',
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.w600,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                  )
-                ],
-              ),
-            ),
-          ),
-          GestureDetector(
-            onTap: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (BuildContext context) {
-                return const NearestPage();
-              }));
-            },
-            child: Container(
-              width: 156,
-              height: 156,
-              margin: const EdgeInsets.symmetric(
-                horizontal: 15.0,
-                vertical: 40.0,
-              ),
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(15),
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Colors.black12,
-                      spreadRadius: 2,
-                      blurRadius: 2,
-                      offset: Offset(2, 2),
-                    )
-                  ]),
-              child: Column(
-                children: [
-                  const Padding(padding: EdgeInsets.all(10.0)),
-                  Image.asset('images/trashbinresize.png'),
-                  const ListTile(
-                    title: Text(
-                      'Nearest',
-                      style: TextStyle(
                         color: Color.fromARGB(255, 29, 83, 95),
-                        fontFamily: 'Poppins',
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.w600,
                       ),
-                      textAlign: TextAlign.center,
                     ),
-                  )
-                ],
+                  ],
+                ),
               ),
             ),
-          ),
-          GestureDetector(
-            onTap: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (BuildContext context) {
-                return const GarbageDayPage();
-              }));
-            },
-            child: Container(
-              width: 156,
-              height: 156,
-              margin: const EdgeInsets.only(
-                bottom: 15.0,
-                top: 10.0,
-                left: 28.0,
-                right: 10.0,
-              ),
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(15),
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Colors.black12,
-                      spreadRadius: 2,
-                      blurRadius: 2,
-                      offset: Offset(2, 2),
-                    )
-                  ]),
-              child: Column(
-                children: [
-                  const Padding(padding: EdgeInsets.all(10.0)),
-                  Image.asset('images/trashbagresize.png'),
-                  const ListTile(
-                    title: Text(
-                      'Pick-up day',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 29, 83, 95),
-                        fontFamily: 'Poppins',
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.w600,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                  )
-                ],
-              ),
-            ),
-          ),
-          GestureDetector(
-            onTap: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (BuildContext context) {
-                return const ScanPage();
-              }));
-            },
-            child: Container(
-              width: 156,
-              height: 156,
-              margin: const EdgeInsets.symmetric(
-                horizontal: 15.0,
-                vertical: 10.0,
-              ),
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(15),
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Colors.black12,
-                      spreadRadius: 2,
-                      blurRadius: 2,
-                      offset: Offset(2, 2),
-                    )
-                  ]),
-              child: Column(
-                children: [
-                  const Padding(padding: EdgeInsets.all(10.0)),
-                  Image.asset('images/boxresize1.png'),
-                  const ListTile(
-                    title: Text(
-                      'Scan material',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 29, 83, 95),
-                        fontFamily: 'Poppins',
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.w600,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                  )
-                ],
-              ),
-            ),
-          ),
-          const Padding(
-            padding: EdgeInsets.only(
-                left: 25,
-                bottom: 0,
-                right: 20,
-                top: 35), //apply padding to some sides only
-            child: Text(
-              "Popular articles",
-              style: TextStyle(
-                color: Color.fromARGB(255, 29, 83, 95),
-                fontFamily: 'Poppins',
-                fontSize: 16.0,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ),
-          GestureDetector(
-            onTap: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (BuildContext context) {
-                return const NewsPage();
-              }));
-            },
-            child: Container(
-              width: 350,
-              height: 150,
-              margin: const EdgeInsets.symmetric(
-                horizontal: 20.0,
-                vertical: 10.0,
-              ),
-              decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 95, 171, 125),
-                borderRadius: BorderRadius.circular(15),
-                boxShadow: const [
-                  BoxShadow(
-                    color: Colors.black12,
-                    spreadRadius: 2,
-                    blurRadius: 2,
-                    offset: Offset(2, 2),
-                  )
-                ],
-              ),
-              child: Row(
-                children: [
-                  const Padding(padding: EdgeInsets.all(5.0)),
-                  Image.asset('images/newsresize2.png'),
-                  const Text(
-                    'Read latest news about\nenvironmentalism\nand sustainability all over\nthe world in one place',
-                    style: TextStyle(
-                      fontFamily: 'Poppins',
-                      color: Color.fromARGB(255, 29, 83, 95),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
