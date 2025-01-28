@@ -7,7 +7,7 @@ import 'dart:math' as math;
 
 import 'package:flutter_application_1/recipe_page.dart';
 
-// ignore: camel_case_types
+
 class tips extends StatelessWidget {
   const tips({super.key});
 
@@ -16,16 +16,15 @@ class tips extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
           fontFamily: "Poppins",
-          scaffoldBackgroundColor: const Color.fromARGB(255, 232, 226, 228)),
+          scaffoldBackgroundColor: Color.fromARGB(255, 232, 226, 228)),
       debugShowCheckedModeBanner: false,
-      home: const Scaffold(
+      home: Scaffold(
         body: page4(),
       ),
     );
   }
 }
 
-// ignore: camel_case_types
 class page4 extends StatefulWidget {
   const page4({super.key});
 
@@ -33,7 +32,6 @@ class page4 extends StatefulWidget {
   State<page4> createState() => _page4State();
 }
 
-// ignore: camel_case_types
 class _page4State extends State<page4> {
   @override
   Widget build(BuildContext context) {
@@ -43,8 +41,8 @@ class _page4State extends State<page4> {
         Stack(
           children: <Widget>[
             Container(
-              height: size.height * 0.36,
-              decoration: const BoxDecoration(
+              height: size.height * 0.37,
+              decoration: BoxDecoration(
                 color: Color.fromARGB(220, 63, 162, 106),
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(36),
@@ -52,43 +50,43 @@ class _page4State extends State<page4> {
               ),
             ),
             Container(
-              margin: const EdgeInsets.only(top: 35.0, left: 10.0),
-              child: IconButton(
-                iconSize: 25,
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const HomePage()),
-                  );
-                },
-                icon: const Icon(Icons.arrow_back,
-                    color: Color.fromARGB(255, 29, 83, 95)),
+              alignment: Alignment.topLeft,
+              child: Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 30),
+                  child: IconButton(
+                    iconSize: 25,
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => HomePage()),
+                      );
+                    },
+                    icon: Icon(Icons.arrow_back,
+                        color: Color.fromARGB(255, 29, 83, 95)),
+                  )),
+            ),
+            Container(
+              alignment: Alignment.topCenter,
+              child: Text(
+                "Save planet together",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'Poppins-SemiBold',
+                    fontSize: 20,
+                    height: 4),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 10),
-              child: Container(
-                alignment: Alignment.topCenter,
-                child: const Text(
-                  "Save planet together",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontFamily: 'Poppins-SemiBold',
-                      fontSize: 20,
-                      height: 4),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 60, left: 35),
+              padding: const EdgeInsets.all(38),
               child: Column(
                 children: [
-                  const SizedBox(
+                  SizedBox(
                     height: 70,
                   ),
                   Container(
                     alignment: Alignment.topLeft,
-                    child: const Text(
+                    child: Text(
                       "Save the planet by\n separating garbage into\n mixed waste and\n recyclables.",
                       style: TextStyle(
                         color: Color.fromARGB(184, 255, 255, 255),
@@ -102,7 +100,7 @@ class _page4State extends State<page4> {
             ),
             Padding(
               padding:
-                  const EdgeInsets.symmetric(horizontal: 2, vertical: 111.6),
+                  const EdgeInsets.symmetric(horizontal: 2, vertical: 73.6),
               child: Container(
                 alignment: Alignment.topRight,
                 child: Image.asset(
@@ -113,28 +111,31 @@ class _page4State extends State<page4> {
               ),
             ),
             Column(
-              children: const [
-                Padding(
-                  padding: EdgeInsets.only(top: 55, left: 20),
-                  child: Text(
-                    "Popular themes",
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 29, 83, 95),
-                        fontFamily: 'Poppins-SemiBold',
-                        fontSize: 16,
-                        height: 23),
+              children: [
+                Container(
+                  child: Padding(
+                    padding: const EdgeInsets.all(28.0),
+                    child: Text(
+                      "Popular themes",
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 29, 83, 95),
+                          fontFamily: 'Poppins-SemiBold',
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          height: 32),
+                    ),
                   ),
                 ),
               ],
             ),
             Padding(
               padding: const EdgeInsets.only(
-                  left: 40, right: 60, bottom: 60, top: 340),
+                  left: 40, right: 60, bottom: 60, top: 310),
               child: GestureDetector(
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const eco()),
+                    MaterialPageRoute(builder: (context) => eco()),
                   );
                 },
                 child: Container(
@@ -146,13 +147,13 @@ class _page4State extends State<page4> {
                   ),
                   child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
-                      children: const [
+                      children: [
                         Text(
                           "Eco friendly",
                           style: TextStyle(
                             fontFamily: 'Poppins-SemiBold',
-                            fontSize: 16,
-                            height: 4,
+                            fontSize: 14,
+                            height: 3,
                             color: Color.fromARGB(123, 29, 83, 95),
                           ),
                         ),
@@ -162,11 +163,11 @@ class _page4State extends State<page4> {
             ),
             Transform.rotate(
               angle: -math.pi / 180 * 10,
-              child: const Padding(
-                padding:
-                    EdgeInsets.only(left: 50, right: 60, bottom: 60, top: 350),
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    left: 50, right: 60, bottom: 60, top: 320),
                 child: Padding(
-                    padding: EdgeInsets.all(3),
+                    padding: const EdgeInsets.all(3),
                     child: Image(
                         image: ResizeImage(
                       AssetImage('images/recbag.png'),
@@ -177,42 +178,41 @@ class _page4State extends State<page4> {
             ),
             Padding(
               padding: const EdgeInsets.only(
-                  left: 210, right: 40, bottom: 60, top: 340),
+                  left: 220, right: 40, bottom: 60, top: 310),
               child: GestureDetector(
                 onTap: () {
-                  Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (BuildContext context) {
-                    return const Recipe();
-                  }));
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Recipe()),
+                  );
                 },
                 child: Container(
                   height: 150,
-                  width: 150,
+                  width: 146,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: const [
-                        Text(
-                          "Leftover recipes",
-                          style: TextStyle(
-                            fontFamily: 'Poppins-SemiBold',
-                            fontSize: 16,
-                            height: 4,
-                            color: Color.fromARGB(123, 29, 83, 95),
-                          ),
-                        ),
-                      ]),
+                  child:
+                      Column(mainAxisAlignment: MainAxisAlignment.end, children: [
+                    Text(
+                      "Leftover recipes",
+                      style: TextStyle(
+                        fontFamily: 'Poppins-SemiBold',
+                        fontSize: 14,
+                        height: 3,
+                        color: Color.fromARGB(123, 29, 83, 95),
+                      ),
+                    ),
+                  ]),
                 ),
               ),
             ),
-            const Padding(
-              padding:
-                  EdgeInsets.only(left: 240, right: 70, bottom: 60, top: 360),
+            Padding(
+              padding: const EdgeInsets.only(
+                  left: 245, right: 60, bottom: 60, top: 320),
               child: Padding(
-                  padding: EdgeInsets.all(3),
+                  padding: const EdgeInsets.all(3),
                   child: Image(
                       image: ResizeImage(
                     AssetImage('images/apple.png'),
@@ -221,26 +221,30 @@ class _page4State extends State<page4> {
                   ))),
             ),
             Column(
-              children: const [
-                Padding(
-                  padding: EdgeInsets.only(left: 30, right: 8, top: 266),
-                  child: Text(
-                    "Recycling Tips",
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 29, 83, 95),
-                        fontFamily: 'Poppins-SemiBold',
-                        fontSize: 16,
-                        height: 23),
+              children: [
+                Container(
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.only(left: 30, right: 8, top: 310),
+                    child: Text(
+                      "Recycling Tips",
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 29, 83, 95),
+                          fontFamily: 'Poppins-SemiBold',
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                          height: 23),
+                    ),
                   ),
                 ),
               ],
             ),
             Padding(
               padding: const EdgeInsets.only(
-                  left: 30, right: 30, bottom: 8, top: 555),
+                  left: 30, right: 30, bottom: 8, top: 525),
               child: Container(
-                height: 140,
-                width: 410,
+                height: 120,
+                width: 400,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(20),
@@ -249,36 +253,33 @@ class _page4State extends State<page4> {
                   alignment: Alignment.topLeft,
                   child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
-                      children: const [
-                        Padding(
-                          padding: EdgeInsets.only(top: 10.0),
-                          child: Text("\t\t\t\t\t\t\t\tPlastic materials",
-                              style: TextStyle(
-                                fontFamily: 'Poppins-SemiBold',
-                                fontSize: 16,
-                                height: 2,
-                                color: Color.fromARGB(123, 29, 83, 95),
-                              ),
-                              textAlign: TextAlign.left),
-                        ),
+                      children: [
+                        Text("\t\t\t\t\t\t\tPlastic materials",
+                            style: TextStyle(
+                              fontFamily: 'Poppins-SemiBold',
+                              fontSize: 16,
+                              height: 2,
+                              color: Color.fromARGB(123, 29, 83, 95),
+                            ),
+                            textAlign: TextAlign.left),
                       ]),
                 ),
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(
-                  left: 35, right: 30, bottom: 6, top: 605),
+                  left: 30, right: 30, bottom: 6, top: 565),
               child: Container(
                 alignment: Alignment.topLeft,
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
-                    children: const [
+                    children: [
                       Text(
                           "\t\t\t\t\t\t\tLDPE is easily recyclable and\n \t\t\t\t\t\toften included in curbside\n \t\t\t\t\t\tpickup in its rigid form.",
                           style: TextStyle(
                             fontFamily: 'Poppins-Medium',
                             fontSize: 14,
-                            color: Color.fromARGB(123, 29, 83, 95),
+                            color: const Color.fromARGB(123, 29, 83, 95),
                           ),
                           textAlign: TextAlign.left),
                     ]),
@@ -286,7 +287,7 @@ class _page4State extends State<page4> {
             ),
             Padding(
               padding: const EdgeInsets.only(
-                  left: 230, right: 10, bottom: 10, top: 660),
+                  left: 230, right: 10, bottom: 7, top: 620),
               child: Center(
                 child: RichText(
                   text: TextSpan(
@@ -317,14 +318,14 @@ class _page4State extends State<page4> {
             ),
             Padding(
               padding: const EdgeInsets.only(
-                  left: 280, right: 10, bottom: 10, top: 570),
+                  left: 285, right: 10, bottom: 10, top: 540),
               child: Container(
                 alignment: Alignment.topLeft,
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
-                    children: const [
+                    children: [
                       Image(
-                          image: ResizeImage(
+                          image: const ResizeImage(
                         AssetImage('images/ldpe.png'),
                         width: 60,
                         height: 75,
@@ -332,15 +333,6 @@ class _page4State extends State<page4> {
                     ]),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(
-                top: 655.0,
-                bottom: 0.0,
-                left: 1.0,
-                right: 0.0,
-              ),
-              child: Image.asset('images/plantresize2.png'),
-            )
           ],
         ),
       ],
