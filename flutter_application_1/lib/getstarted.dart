@@ -3,7 +3,6 @@ import 'package:flutter_application_1/register.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-// ignore: camel_case_types
 class getstarted extends StatelessWidget {
   const getstarted({super.key});
 
@@ -12,16 +11,15 @@ class getstarted extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
           fontFamily: "Poppins",
-          scaffoldBackgroundColor: const Color.fromARGB(255, 232, 226, 228)),
+          scaffoldBackgroundColor: Color.fromARGB(255, 232, 226, 228)),
       debugShowCheckedModeBanner: false,
-      home: const Scaffold(
+      home: Scaffold(
         body: page1(),
       ),
     );
   }
 }
 
-// ignore: camel_case_types
 class page1 extends StatefulWidget {
   const page1({super.key});
 
@@ -29,43 +27,41 @@ class page1 extends StatefulWidget {
   State<page1> createState() => _page1State();
 }
 
-// ignore: camel_case_types
 class _page1State extends State<page1> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Padding(
-      padding: const EdgeInsets.symmetric(
+      padding: EdgeInsets.symmetric(
         horizontal: 24,
       ),
       child: Column(children: [
-        const Padding(
-          padding: EdgeInsets.only(top: 10),
+        Container(
           child: Text(
             "wasteD",
             style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Color.fromARGB(255, 29, 83, 95),
                 fontFamily: 'Poppins-Bold',
-                fontSize: 16),
+                fontSize: 14),
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 15),
+          padding: EdgeInsets.only(top: 5),
           child: Image.asset(
             'assets/image/greengren.png',
-            height: 400,
-            width: 600,
+            height: 300,
+            width: 500,
           ),
         ),
         Container(
           alignment: Alignment.topLeft,
-          child: const Padding(
+          child: Padding(
             padding: EdgeInsets.symmetric(
               horizontal: 24,
             ),
             child: Text(
-              "\nWelcome to\nwasteD!",
+              "\nWelcome to\n wasteD!",
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Color.fromARGB(255, 29, 83, 95),
@@ -78,7 +74,7 @@ class _page1State extends State<page1> {
         Container(
           alignment: Alignment.topLeft,
           child: Column(
-            children: const <Widget>[
+            children: <Widget>[
               Text(
                 " ",
                 style: TextStyle(fontSize: 8),
@@ -88,11 +84,11 @@ class _page1State extends State<page1> {
                   horizontal: 24,
                 ),
                 child: Text(
-                  "Conveniently manage your waste\nand help protect the environment\nwith just a few taps.\n\n",
+                  "Conveniently manage your waste\n and help protect the environment\n with just a few taps.\n\n",
                   style: TextStyle(
                       fontFamily: 'Poppins-Medium',
-                      fontSize: 15,
-                      color: Color.fromARGB(125, 29, 83, 95)),
+                      fontSize: 16,
+                      color: Color.fromARGB(123, 29, 83, 95)),
                 ),
               )
             ],
@@ -102,17 +98,17 @@ class _page1State extends State<page1> {
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const register()),
+              MaterialPageRoute(builder: (context) => register()),
             );
           },
           child: Container(
             height: 40,
             width: 310,
             decoration: BoxDecoration(
-              color: const Color.fromARGB(220, 63, 162, 106),
+              color: Color.fromARGB(220, 63, 162, 106),
               borderRadius: BorderRadius.circular(20),
             ),
-            child: const Center(
+            child: Center(
               child: Text(
                 "Get Started",
                 style: TextStyle(
@@ -127,15 +123,15 @@ class _page1State extends State<page1> {
         Center(
           child: RichText(
             text: TextSpan(
-                text: "\nAlready have an acount?",
-                style: const TextStyle(
+                text: "\nAlready have an acoount?",
+                style: TextStyle(
                     fontFamily: 'Poppins-Medium',
                     fontSize: 14,
                     color: Color.fromARGB(125, 30, 30, 30)),
                 children: <TextSpan>[
                   TextSpan(
                       text: "\tLog in",
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontFamily: 'Poppins-Medium',
                         fontSize: 14,
                         color: Color.fromARGB(123, 29, 83, 95),
@@ -144,8 +140,7 @@ class _page1State extends State<page1> {
                         ..onTap = () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(
-                                builder: (context) => const login()),
+                            MaterialPageRoute(builder: (context) => login()),
                           );
                         })
                 ]),
