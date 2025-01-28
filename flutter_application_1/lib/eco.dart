@@ -89,7 +89,7 @@ class _page5State extends State<page5> {
                 child: Container(
                   alignment: Alignment.topRight,
                   child: Image.asset(
-                    'assets/image/eco.png',
+                    'images/eco.png',
                     height: 150,
                     width: 160,
                   ),
@@ -138,7 +138,7 @@ class _page5State extends State<page5> {
                   ),
                   child: const Image(
                       image: ResizeImage(
-                    AssetImage('assets/image/plastic.png'),
+                    AssetImage('images/plastic.png'),
                     width: 25,
                     height: 30,
                   ))),
@@ -165,7 +165,7 @@ class _page5State extends State<page5> {
                   ),
                   child: const Image(
                       image: ResizeImage(
-                    AssetImage('assets/image/wood.png'),
+                    AssetImage('images/wood.png'),
                     width: 20,
                     height: 40,
                   ))),
@@ -192,7 +192,7 @@ class _page5State extends State<page5> {
                   ),
                   child: const Image(
                       image: ResizeImage(
-                    AssetImage('assets/image/netbag.png'),
+                    AssetImage('images/netbag.png'),
                     width: 20,
                     height: 40,
                   ))),
@@ -252,7 +252,7 @@ class _page5State extends State<page5> {
                   padding: EdgeInsets.all(3),
                   child: Image(
                       image: ResizeImage(
-                    AssetImage('assets/image/ecobag.png'),
+                    AssetImage('images/ecobag.png'),
                     width: 60,
                     height: 90,
                   ))),
@@ -286,7 +286,7 @@ class _page5State extends State<page5> {
                   padding: EdgeInsets.all(3),
                   child: Image(
                       image: ResizeImage(
-                    AssetImage('assets/image/bamboo.png'),
+                    AssetImage('images/bamboo.png'),
                     width: 70,
                     height: 90,
                   ))),

@@ -106,7 +106,7 @@ class _page4State extends State<page4> {
               child: Container(
                 alignment: Alignment.topRight,
                 child: Image.asset(
-                  'assets/image/earth.png',
+                  'images/earth.png',
                   height: 180,
                   width: 190,
                 ),
@@ -169,7 +169,7 @@ class _page4State extends State<page4> {
                     padding: EdgeInsets.all(3),
                     child: Image(
                         image: ResizeImage(
-                      AssetImage('assets/image/recbag.png'),
+                      AssetImage('images/recbag.png'),
                       width: 60,
                       height: 100,
                     ))),
@@ -215,7 +215,7 @@ class _page4State extends State<page4> {
                   padding: EdgeInsets.all(3),
                   child: Image(
                       image: ResizeImage(
-                    AssetImage('assets/image/apple.png'),
+                    AssetImage('images/apple.png'),
                     width: 90,
                     height: 90,
                   ))),
@@ -325,7 +325,7 @@ class _page4State extends State<page4> {
                     children: const [
                       Image(
                           image: ResizeImage(
-                        AssetImage('assets/image/ldpe.png'),
+                        AssetImage('images/ldpe.png'),
                         width: 60,
                         height: 75,
                       ))

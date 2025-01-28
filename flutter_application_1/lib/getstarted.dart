@@ -49,7 +49,7 @@ class _page1State extends State<page1> {
         Padding(
           padding: EdgeInsets.only(top: 5),
           child: Image.asset(
-            'assets/image/greengren.png',
+            'images/greengren.png',
             height: 300,
             width: 500,
           ),
